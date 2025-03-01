@@ -1,0 +1,7 @@
+{
+  "name": "VavaHelper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
