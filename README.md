@@ -3,7 +3,7 @@
 
 Este é um projeto de aplicativo móvel desenvolvido com **Ionic** e **Vue.js**. O aplicativo se comunica com um backend em **Java** para fornecer funcionalidades como [listar as funcionalidades principais].
 
-## Tecnologias Utilizadas 👾
+## Tecnologias Utilizadas ✏
 
 - **Ionic Framework**: Framework para criação de aplicativos móveis híbridos.
 - **Vue.js**: Framework JavaScript para construção de interfaces de usuário.
