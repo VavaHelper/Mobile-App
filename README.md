@@ -7,7 +7,6 @@ Este é um projeto de aplicativo móvel desenvolvido com **Ionic** e **Vue.js**.
 
 - **Ionic Framework**: Framework para criação de aplicativos móveis híbridos.
 - **Vue.js**: Framework JavaScript para construção de interfaces de usuário.
-- **Capacitor**: Plataforma nativa para integrar funcionalidades de dispositivo, como câmera, GPS, etc.
 - **Backend**: A aplicação se comunica com um backend desenvolvido em **Java** (pode ser um backend RESTful, Spring Boot, etc.).
 - **Axios**: Biblioteca para fazer requisições HTTP entre o app e o servidor backend.
 
