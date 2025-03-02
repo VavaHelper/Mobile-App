@@ -10,15 +10,15 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import SplashScreen from './components/SplashScreen.vue';
+import SplashScreen from '@/components/SplashScreen.vue';
 
 const isLoading = ref(true); // Controla a exibição do Splash Screen
 
-// Simula o tempo de carregamento
+// Carregamento Splash Screen
 onMounted(() => {
   setTimeout(() => {
-    isLoading.value = false; // Esconde o Splash Screen após 3 segundos
-  }, 3000); // Tempo em milissegundos
+    isLoading.value = false;
+  }, 2000); 
 });
 </script>
 

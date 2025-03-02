@@ -14,16 +14,15 @@ export default {
 
 .splash-screen {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* 100% da altura da tela */
-  width: 100vw; /* 100% da largura da tela */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
   background-color: #ffffff;
 }
 
-/* Ajusta a imagem */
 .splash-image {
-  max-width: 80%; /* Evita que a imagem fique grande demais */
-  max-height: 60vh; /* Ajusta a altura para se adaptar à tela */
+  max-width: 80%;
+  max-height: 60vh;
 }
 </style>
