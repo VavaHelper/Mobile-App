@@ -1,17 +1,16 @@
 
-# Mobile App
+# Mobile App 📳
 
 Este é um projeto de aplicativo móvel desenvolvido com **Ionic** e **Vue.js**. O aplicativo se comunica com um backend em **Java** para fornecer funcionalidades como [listar as funcionalidades principais].
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas ✏
 
 - **Ionic Framework**: Framework para criação de aplicativos móveis híbridos.
 - **Vue.js**: Framework JavaScript para construção de interfaces de usuário.
-- **Capacitor**: Plataforma nativa para integrar funcionalidades de dispositivo, como câmera, GPS, etc.
 - **Backend**: A aplicação se comunica com um backend desenvolvido em **Java** (pode ser um backend RESTful, Spring Boot, etc.).
 - **Axios**: Biblioteca para fazer requisições HTTP entre o app e o servidor backend.
 
-## Arquitetura
+## Arquitetura 📚
 
 O aplicativo segue a arquitetura cliente-servidor, onde:
 
@@ -19,7 +18,7 @@ O aplicativo segue a arquitetura cliente-servidor, onde:
 - **Backend**: Desenvolvido em **Java** (exemplo: Spring Boot, Java EE) para processar as requisições e gerenciar a lógica de negócios.
 - **Comunicação**: O app se comunica com o backend através de requisições HTTP RESTful, utilizando **Axios** para consumir APIs.
 
-## Instalação
+## Instalação 🔨
 
 Para rodar o aplicativo localmente em seu dispositivo ou no simulador, siga os seguintes passos:
 
@@ -56,7 +55,7 @@ export const environment = {
 };
 ```
 
-### 4. Rodar o Aplicativo
+### 4. Rodar o Aplicativo 
 
 Para rodar o aplicativo no ambiente de desenvolvimento, utilize o comando:
 
@@ -76,7 +75,7 @@ Ou para iOS:
 ionic capacitor run ios
 ```
 
-### 5. Iniciar o Backend
+### 5. Iniciar o Backend 💻
 
 Caso o backend esteja sendo executado localmente, certifique-se de que o servidor em Java esteja rodando corretamente. Se estiver utilizando o **Spring Boot**, por exemplo, basta rodar o comando:
 
