@@ -1,9 +1,8 @@
 <template>
-  <Header />
+<Header/>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import Header from '@/components/Header.vue';
 
 </script>

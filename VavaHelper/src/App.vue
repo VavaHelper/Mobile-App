@@ -1,9 +1,7 @@
 <template>
   <ion-app>
-    <!-- Exibe o Splash Screen enquanto isLoading é true -->
     <SplashScreen v-if="isLoading" />
-    <!-- O conteúdo do app será mostrado depois que o Splash Screen desaparecer -->
-    <ion-router-outlet v-else />
+    <ion-router-outlet :key="$route.fullPath" />
   </ion-app>
 </template>
 
@@ -12,7 +10,7 @@ import { ref, onMounted } from 'vue';
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import SplashScreen from '@/components/SplashScreen.vue';
 
-const isLoading = ref(true); // Controla a exibição do Splash Screen
+const isLoading = ref(true);
 
 // Carregamento Splash Screen
 onMounted(() => {

@@ -1,19 +1,19 @@
 <template>
-    <header class="flex justify-between items-center px-6 py-3 bg-dark-gradient">
-        <!-- Logo e Nome -->
-        <div class="flex items-center space-x-2">
-            <img src="@/assets/HeaderLogo.png" alt="Vava Helper Logo" class="h-8">
-        </div>
+        <header class="flex justify-between items-center px-6 py-3 bg-dark-gradient">
+            <div class="flex items-center space-x-2">
+                <img src="@/assets/HeaderLogo.png" alt="Vava Helper Logo" class="h-8">
+            </div>
 
-        <!-- Botão Login (mantendo tudo na mesma linha) -->
-        <ion-button class="login-button">
-            Login
-        </ion-button>
-    </header>
+            <ion-button class="login-button" :routerLink="'/login'">
+
+                 login
+            </ion-button>
+        </header>
 </template>
 
 <script setup>
 import { IonButton } from '@ionic/vue';
+import { RouterView, RouterLink } from 'vue-router';
 </script>
 
 <style scoped>
