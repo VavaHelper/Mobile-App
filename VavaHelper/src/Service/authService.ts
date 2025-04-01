@@ -1,6 +1,7 @@
 import axios from "axios";
+import { useRoute } from "vue-router";
 
-const API_URL = "http://localhost:8080/auth/login";
+const API_URL = "http://localhost:8080/auth";
 
 export const login = async (username: string , password: string) => 
 {
@@ -22,6 +23,25 @@ export const login = async (username: string , password: string) =>
         throw new Error("Usuario ou seha invalido")
     }
 };
+
+export const register = async(username: String, password: string ) =>
+{
+    try
+    {
+        const response = await axios.post(`${API_URL}/register` , {
+            login: username,
+            password: password
+        });
+
+        return response.data
+    }
+    catch
+    {
+        throw new Error("Não foi póssivel registrar um novo usuário")
+    }
+}
+
+
 
 export const logout = () =>
 {

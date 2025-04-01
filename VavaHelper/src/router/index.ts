@@ -25,7 +25,13 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     name: 'Login',
     component: TelaLogin
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import ('../views/TelaCadastro.vue')
   }
+
 ]
 
 const router = createRouter({

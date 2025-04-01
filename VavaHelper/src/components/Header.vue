@@ -11,9 +11,10 @@
         </header>
 </template>
 
-<script setup>
+<script setup> 
 import { IonButton } from '@ionic/vue';
 import { RouterView, RouterLink } from 'vue-router';
+
 </script>
 
 <style scoped>
@@ -39,5 +40,12 @@ header {
 /* Hover do botão */
 .login-button:hover {
     --background: #5fc99a; /* Mudança de cor ao passar o mouse */
+}
+
+/* Mensagem de erro */
+.error-text {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
 }
 </style>

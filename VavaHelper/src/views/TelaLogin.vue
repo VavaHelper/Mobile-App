@@ -8,17 +8,19 @@
         <IonContent class="ion-padding">
             <IonCard>
                 <IonCardHeader>
-                    <!-- <IonCardTitle>Qual será a proxima jogada</IonCardTitle> -->
                     <IonCardContent>
                         <ion-item>
-                            <ion-label>Usuário</ion-label>
+                            <ion-label position="stacked" >Usuário</ion-label>
                             <IonInput v-model="username" type="text"></IonInput>
                         </ion-item>
                         <ion-item>
-                            <IonLabel>Senha</IonLabel>
+                            <IonLabel position="stacked" >Senha</IonLabel>
                             <IonInput v-model="password" type="password"></IonInput>
                         </ion-item>
                         <ion-button expand="full" @click="handleLogin" >Entrar</ion-button>
+                        <IonButton expand="full" :routerLink="'/register'"> Cadastre-se</IonButton>
+
+                        <p v-if="errorMessage" class="error-text">{{ errorMessage }}</p>
                     </IonCardContent>
                 </IonCardHeader>
             </IonCard>
@@ -32,7 +34,6 @@ import { IonButton,
         IonCard, 
         IonCardContent, 
         IonCardHeader, 
-        IonCardTitle, 
         IonContent, 
         IonHeader, 
         IonInput, 
@@ -43,7 +44,7 @@ import { IonButton,
         IonItem
     } from '@ionic/vue';
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 
 
 const username = ref("")
