@@ -1,13 +1,17 @@
 <template>
 <Header/>
+
+<FloatButton/>
 </template>
 
 <script setup lang="ts">
 import Header from '@/components/Header.vue';
-
+import FloatButton from '@/components/FloatButton.vue'
 </script>
-
 <style scoped>
+ion-content {
+  --padding-bottom: 100px; /* espaço pra não ficar por trás da barra */
+}
 #container {
   text-align: center;
   
@@ -16,7 +20,7 @@ import Header from '@/components/Header.vue';
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-}
+} 
 
 #container strong {
   font-size: 20px;

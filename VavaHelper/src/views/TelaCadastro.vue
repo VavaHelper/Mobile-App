@@ -25,7 +25,7 @@
                             <li :class="{ valid: passwordCriteria.specialChar }">✅ Pelo menos um caractere especial (!@#$%^&*)</li>
                         </ul>
 
-                        <IonButton expand="full" @click="handleRegister">Cadastre-se</IonButton>
+                        <IonButton expand="full" @click="handleRegister">Cadastre-se</IonButton>                       
                         <p v-if="errorMessage" class="error-text">{{ errorMessage }}</p>
                     </IonCardContent>
                 </IonCardHeader>

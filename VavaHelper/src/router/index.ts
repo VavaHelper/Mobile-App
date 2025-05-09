@@ -30,7 +30,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/register',
     name: 'register',
     component: () => import ('../views/TelaCadastro.vue')
-  }
+  },
+  {
+    path:'/agents',
+    name: 'agents',
+    component: () => import('../views/Agents.vue')
+  },
 
 ]
 

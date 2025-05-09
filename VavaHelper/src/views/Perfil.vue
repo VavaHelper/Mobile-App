@@ -2,36 +2,42 @@
 import { ref, onMounted } from "vue";
 import api from "@/Service/api";
 import { logout } from "@/Service/authService";
-import { useRouter } from "vue-router";
-import Header from "@/components/Header.vue";
+import { useRouter } from "vue-routerHeader";
+import Header from "@/components/.vue";
+import FloatButton from "@/components/FloatButton.vue";
 
-const mensagem = ref("");
+
 const router = useRouter();
+const nomeUsuario = ref('')
 
-const fetchData = async () => {
-  try {
-    const response = await api.get("/some-protected-route"); // Altere para seu endpoint protegido
-    mensagem.value = response.data;
-  } catch (error) {
-    console.error("Erro ao buscar dados protegidos:", error);
+const buscarUsuário = async() =>
+{
+  try{
+    const response = await api.get('/usuario')
   }
-};
+  catch{
+    console.error("Nome de usário não encontrado")
+  }
+}
 
 const handleLogout = () => {
   logout();
   router.push("/");
 };
 
-onMounted(fetchData);
 </script>
 
 <template>
   <ion-page>
     <ion-header>
         <Header/>
+
+
+        <FloatButton/>
     </ion-header>
     <ion-content class="ion-padding">
       <h2>Bem-vindo!</h2>
     </ion-content>
   </ion-page>
 </template>
+ 

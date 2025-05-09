@@ -4,16 +4,40 @@
                 <img src="@/assets/HeaderLogo.png" alt="Vava Helper Logo" class="h-8">
             </div>
 
-            <ion-button class="login-button" :routerLink="'/login'">
-
+            <ion-button v-if="!isAutenticad" class="login-button" :routerLink="'/login'">
                  login
             </ion-button>
+
+            <ion-button  v-if="isAutenticad" class="login-button" @click="handleLogout"> Deslogar </ion-button>
         </header>
 </template>
 
 <script setup> 
+import router from '@/router';
+import { getToken, logout } from '@/Service/authService';
 import { IonButton } from '@ionic/vue';
+import { onMounted, ref } from 'vue';
 import { RouterView, RouterLink } from 'vue-router';
+
+
+    const isAutenticad = ref(false)
+
+    const cheackAuth = () =>{
+        isAutenticad.value = !!getToken();
+    }
+
+    onMounted(cheackAuth);
+
+const handleLogout = () => {
+    logout();
+    cheackAuth();
+    router.push("/");
+    setTimeout(() => {
+        window.location.reload(); // Recarrega a página para limpar qualquer estado residual
+    }, 100);
+    
+};
+
 
 </script>
 
@@ -35,6 +59,7 @@ header {
     font-weight: bold;
     padding: 10px 20px;
     margin-left: auto; /* Garante que o botão vá para a direita */
+    z-index: 10; /* Mais alto do que o z-index do ion-router-outlet */
 }
 
 /* Hover do botão */
